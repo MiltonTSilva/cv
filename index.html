@@ -1,11 +1,358 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curriculum Vitae - Milton Tomé da Silva</title>
-</head>
-<body>
-  <h1>Curriculum Vitae - Milton Tomé da Silva</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curriculum Vitae - Milton Tomé da Silva</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .bold {
+        font-weight: bold;
+      }
+
+      .cor-azul {
+        color: blue;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .flex-justify-content-center {
+        justify-content: center;
+      }
+
+      .flex-align-items-center {
+        align-items: center;
+      }
+
+      .flex-center {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .flex-column {
+        flex-direction: column;
+      }
+
+      .flex-align-self-center {
+        align-self: center;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+      .sidebar {
+        width: 25%;
+        background-color: #fff;
+        padding: 100px;
+      }
+      .content {
+        width: 99%;
+        display: flex;
+        flex-direction: column;
+      }
+      .content > div {
+        background-color: #fff;
+        flex: 1;
+        padding: 10px;
+        border: 1px solid black;
+        margin: 1% 5% 0% 5%;
+      }
+
+      .imgContent {
+        width: 10%;
+      }
+
+      .link {
+        color: blue;
+      }
+
+      .box {
+        font-size: 24px;
+        position: relative;
+        border: 2px solid #000;
+        margin-bottom: 10%;
+      }
+      .box::before {
+        content: attr(data-label);
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        background-color: #fff;
+        padding: 0 5px;
+        font-weight: bold;
+      }
+
+      h1 {
+        margin-left: 2%;
+        padding-bottom: 2%;
+        width: 100%;
+      }
+
+      h2 {
+        margin-left: 2%;
+        margin-bottom: 0%;
+        padding-bottom: 2%;
+      }
+      h3 {
+        font-size: medium;
+        margin-left: 2%;
+      }
+      h4 {
+        margin-left: 2%;
+      }
+      p {
+        font-size: large;
+        margin-bottom: 1%;
+        margin-top: 1%;
+        margin-left: 2%;
+        text-align: justify;
+      }
+
+      @media (max-width: 800px) {
+        .container {
+          flex-direction: column;
+        }
+
+        .content > div {
+          margin: 1% 5% 5% 5%;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+
+        h2 {
+          font-size: 16px;
+        }
+        h3 {
+          font-size: 12px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div>
+          <div class="container">
+            <img src="eu.png" alt="Foto de Milton Tomé da Silva" />
+
+            <div>
+              <h1>Milton Tomé da Silva</h1>
+              <h2>Analista Programador</h2>
+              <div class="container">
+                <h3 class="flex flex-align-items-center">
+                  <img class="imgContent" src="celular.png" alt="celular" />
+                  <span>(11) 9.6707-9318</span>
+                </h3>
+                <h3 class="flex flex-align-items-center link">
+                  <img class="imgContent" src="email.png" alt="email" />
+                  <a href="mailto:miltontsilva@gmail.com"
+                    >miltontsilva@gmail.com</a
+                  >
+                </h3>
+
+                <h3 class="flex flex-align-items-center link">
+                  <img class="imgContent" src="linkedin.png" alt="linkedin" />
+                  <a href="https://www.linkedin.com/in/miltontsilva/"
+                    >https://www.linkedin.com/in/miltontsilva/</a
+                  >
+                </h3>
+                <h3 class="flex flex-align-items-center link">
+                  <img class="imgContent" src="github.png" alt="github" />
+                  <a href="https://github.com/MiltonTSilva"
+                    >https://github.com/MiltonTSilva</a
+                  >
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box" data-label="Perfil">
+          <p>
+            • Desenvolvedor com ampla experiência e sólida formação técnica e
+            diversas certificações, além de habilidades práticas em projetos
+            complexos em diferentes setores.
+          </p>
+        </div>
+        <div class="box" data-label="Formação">
+          <p>• Gestão Comercial – Uninove 2018</p>
+        </div>
+        <div class="box" data-label="Certificações">
+          <p>
+            • Microsoft Certified Azure Fundamentals Emitida em dezembro de 2022
+            | Código da credencial: I532-1304
+          </p>
+          <p>
+            • Microsoft Certified Azure Data Fundamentals Emitida em abril de
+            2022 | Código da credencial: I247-4091
+          </p>
+        </div>
+        <div class="box" data-label="Idiomas">
+          <p>• Inglês: Técnico</p>
+          <p>• Espanhol: Básico</p>
+        </div>
+        <div class="box" data-label="Hard Skills">
+          <p>
+            • Linguagens e Tecnologias: C#, Python, JavaScript, SQL Server,
+            MySQL, ASP.NET Core, Blazor, API REST, Entity Framework Core, HTML5,
+            CSS, TypeScript, Angular, JSON, Razor Page, Web Forms.
+          </p>
+          <p>
+            • Ferramentas: Postman, Insomnia, VS Code, Visual Studio, GitHub,
+            Azure.
+          </p>
+        </div>
+        <div class="box" data-label="Cursos">
+          <p>
+            • Formação .NET Developer | Academia PME Educação E Consultoria Em
+            Negócios Concluído em Março de 2024 | 93 horas
+          </p>
+          <p>
+            • React Native | Rocketseat Concluído em Fevereiro de 2024 | 5 horas
+          </p>
+          <p>
+            • Formação Angular Developer | Academia PME Educação E Consultoria
+            Em Negócios Concluído em Janeiro de 2024 | 37 horas
+          </p>
+          <p>
+            • TypeScript para Angular | Academia PME Educação E Consultoria Em
+            Negócios Concluído em Dezembro de 2023 | 3 horas
+          </p>
+          <p>
+            • Trabalhando em Equipes Ágeis | Academia PME Educação E Consultoria
+            Em Negócios Concluído em Novembro de 2023 | 3 horas
+          </p>
+          <p>
+            • Fundamentos de Qualidade de Software | Academia PME Educação E
+            Consultoria Em Negócios Concluído em Novembro de 2023 | 3 horas
+          </p>
+        </div>
+        <div class="box" data-label="Experiência Profissional">
+          <p class="cor-azul bold">
+            09/2021 – 02/2023 Avanade do Brasil | Analista de Sistemas (CLT)
+          </p>
+          <p>
+            • Desenvolvimento de OCR usando Angular, C#, SQL Server, Azure e
+            Regex para validar faturas.
+          </p>
+          <p>
+            • Objetivo: Verificar a veracidade das informações nas faturas da
+            Telefônica.
+          </p>
+          <hr />
+          <p class="cor-azul bold">
+            12/2020 – 09/2021 XL Consultoria | Programador (CLT)
+          </p>
+          <p>
+            • Desenvolvimento de aplicativo integrando áreas de logística,
+            comercial, supply chain, marketing, financeiro e RH.
+          </p>
+          <p>
+            • Tecnologias: ASP.NET Core 5, C#, MySQL, JavaScript, CSS, Bootstrap
+            4, JWT, Entity Framework, Git.
+          </p>
+          <hr />
+          <p class="cor-azul bold">
+            10/2018 – 01/2019 Tomé Serviços de Informática Ltda | Consultor
+          </p>
+          <p>
+            • Sistema de administração de granjas usando HTML, CSS, Bootstrap,
+            C#, MVC e SQL Server.
+          </p>
+          <p>
+            • Hospedado no Azure com Entity Framework e gráficos via API do
+            Google.
+          </p>
+          <hr />
+          <p class="cor-azul bold">
+            04/2016 – 12/2017 Equipe Ar Condicionado | Gerente
+            Administrativo/Financeiro
+          </p>
+          <p>
+            • Gerenciamento administrativo e financeiro, contratação de pessoas,
+            pagamentos.
+          </p>
+          <hr />
+          <p class="cor-azul bold">
+            11/2014 – 03/2016 Sofhar Gestão & Tecnologia S.A. | Analista de
+            Sistema Sênior (CLT)
+          </p>
+          <p>
+            • Análise de requisitos e construção de especificações funcionais e
+            técnicas para a Prefeitura de Jundiaí e Ministério da Educação
+          </p>
+          <hr />
+          <p class="cor-azul bold">
+            05/2013 – 02/2014 CPM Braxis | Analista de Sistema Sênior (CLT)
+          </p>
+          <p>
+            • Medição e validação de projetos de desenvolvimento e melhoria,
+            especificação funcional e planos de teste.
+          </p>
+          <hr />
+          <p class="cor-azul bold">
+            07/2012 – 03/2013 DRM Serviços de Consultoria | Analista de Sistema
+            Sênior (CLT Flex)
+          </p>
+          <p>
+            • Levantamento e especificação de requisitos, modelagem de dados e
+            codificação em Visual Basic 5.0 e Oracle 11g.
+          </p>
+          <hr />
+          <p class="cor-azul bold">
+            10/2007 – 03/2012 Expertise Tecnologia / Tivit Tecnologia | Analista
+            de Sistema Sênior (CLT)
+          </p>
+          <p>
+            • Especificação de requisitos, modelagem de dados e planos de teste
+            para diversos projetos.
+          </p>
+        </div>
+        <div class="box" data-label="Outras Empresas">
+          <p>
+            05/2005 – 09/2007 | DTS Latin America - Analista de Sistema Sênior
+            (FLEX)
+          </p>
+          <p>
+            01/2005 – 04/2005 | H&D Informática Ltda. - Analista Programador
+            (CLT)
+          </p>
+          <p>
+            07/2004 – 01/2005 | Omnion Marketing de Relacionamento - Coordenador
+            de TI (CLT)
+          </p>
+          <p>
+            06/2004 – 06/2004 | Stefanini Consultoria e Acessória em Informática
+            - Analista de Sistema (Consultor)
+          </p>
+          <p>
+            10/2001 – 11/2003 | Motorola Industrial Ltda. - Analista de Sistema
+            (Consultor)
+          </p>
+          <p>
+            08/2000 – 07/2001 | Stefanini Consultoria e Acessória em Informática
+            – Analista Programador (Consultor)
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
+
